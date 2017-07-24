@@ -1,0 +1,13 @@
+// The base font size is 16px and it HEX code is #ffffff
+// The body font family is Open Sans Light
+// The medium grey colour of the text in the footer is #c2c2c2
+
+*{
+  box-sizing: border-box;
+  background-color: $background-color-black;
+}
+
+.logo {
+  margin:10rem;
+  background-color: black;
+}

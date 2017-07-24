@@ -1,0 +1,68 @@
+//ITUNES API CODEALONG
+
+//Form Submission - telling it to grab the album search when we click the submit button
+$("#album-search").on("submit", function(event){
+
+  //jquery ajax call. defining what kind of ajax method. taking or giving? taking because GET method. jsonp means json but with padding - bypasses some security. and url. where is that end point - where are we getting the data. every api defines what data type they allow you to grab. itunes uses jsonp. owners of data define how they allow it to be used.
+ $.ajax({
+   method:"GET", 
+   dataType:"jsonp",
+   url:"https://itunes.apple.com/search?entity=album&limit=6&term="
+ 
+   })
+   //PLUS+THE+ARTIST+NAME - took the end of the url out
+//adding plus sign is called concatenating. and adding methods like that is called chaining methods. saying the first parameter is what you're looking for and then chaining methods. ^
+
+  .done(function(data){
+     $(".artist-name").val().replace("", "+");
+   console.log(data);
+   $.each(data.results,function(key,value){
+     $("album-list").append("<li><img src='"+value.artworkUrl60+"'>"+value.collectionName+"</li>");
+   })
+     //.done(function(data) -done function will only run if we're actually grabbing things. .done is a jquery ajax method. saying when we have the data going to create some actions. 
+//.each(data.results,function(key,value) -storing the results in data. data is that jsonp object that we're getting returned. for each of them (.each) 
+     
+     //console.log(data);   -in console log .data.results. "object" is the data. open up the results array and use .each to navigate it. the reslt is an array of objects.
+     
+     //$("album-list").append("<li><img 
+    //src='"+value.artworkUrl60+"'>"+value.collectionName+"</li>");
+     //append adds an item. go to inspect and then network where the console is.
+ })
+
+   .fail(function(){
+     console.log("anything");
+     ("album-list").append("<li>no results</li>");
+   })
+});
+
+/*
+  
+$("#album-search").on("submit", function(event){
+
+ $.ajax({
+   method:"GET", 
+   dataType:"jsonp",
+   url:"https://itunes.apple.com/search?entity=album&limit=6&term="
+   $("artist-name").val().replace("","+")
+   })
+   
+  .done(function(data){
+   console.log(data);
+   $.each(data.results,function(key,value){
+     $("album-list").append("<li><img 
+    src='"+value.artworkUrl60+"'>"+value.collectionName+"</li>");
+   });
+ }) //end of done
+
+   .fail(function(){
+     console.log("anything");
+     ("album-list").append("<li>no results</li>");
+   });  //end of fail
+}); //end of on function
+
+Now to clean up code - make sure indentation is correct and add variables. so stuff inside album-list oculd be assign a variable to make the code more readable.
+
+
+  
+
+  

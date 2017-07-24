@@ -1,19 +1,9 @@
-body {
-  background-color: black;
-  font-size: 80px;
-  }
-
 @import 'reset';
 @import 'fonts';
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'globals';
 
-// //@import everything
-// reset
-// fonts
-// footer
-// globals
-// header
-// content
-// footer
-// //these will need files but wont show up in css.
-// mixins
-// variables
+@import 'mixins';
+@import 'variables';

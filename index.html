@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="build/css/style.min.css">
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <title>Instanews</title>
+    <link rel="stylesheet" type="text/scss" href="build/css/style.min.css">
+    <link rel="stylesheet" type="text/scss" href="reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<title></title> Find out why every site needs this if it cant be seen?-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
-  <body>
-  
-    <p>PLS WORK PLS</p>
 
-  
+<!-- ITUNES exercise markup
+  <div class="itunes-widget">
+   <form action="#" id="album-search">
+      <div class="artist-search">
+         <input type="text" name="artist_name" id="artist-name" placeholder="Enter artist first and last name" />
+         <input type="submit" value="Get Albums" />
+      </div>
+   </form>
+   <ul class="album-list"></ul>
+</div>
+BUT now using <select> not entering names -->
+
+<!--search form and options -->
+  <body>
+      <header class="header">
+        <img class="logo" src="./images/nyt-logo.svg" alt="New York Times Logo">
+        </img>
+        <form class="search-form" action="#" method="post">
+          <div class="search-form-inner">
+            <p>Choose a section:</p>
+            <select name="sections" id="sections">
+               <option value="">Sections ...</option>
+               <option value="home">Home</option>
+               <option value="arts">Arts</option>
+               <option value="business">Business</option>
+               <option value="sports">Sports</option>
+               <option value="technology">Technology</option>
+               <option value="fashion">Fashion</option>
+            </select>
+           </div>
+        </form>
+      </header>
+    </div>
+<!--stories-->
+      <section class="story-grid">
+        <div class="stories"></div>
+        <!--<img src="images/ajax-loader.gif" alt="Loading..." class="ajax-loader">-->
+       <ul></ul>
+      </section>
+    </div>
+
+<!--footer-->
+      <footer class="footer">
+            <div class="copyright">
+              <p>© Copyright 2016 Instanews</p>
+           </div>
+         </footer>
+
+<!--Js scripts -->    
+<script src="./js/scripts.js"></script>
 <script src="./build/js/scripts.min.js"></script>
+
   </body>
+
 </html>
