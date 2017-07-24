@@ -1,6 +1,10 @@
+.header{
+  background-color: black;
+}
+
 .body {
-  $background-color-black;
-  $font-size;
-  $font-color-white;
+  background-color: $background-color-black;
+  font-size: $font-size;
+  color: $font-color-white;
   height: 90vh;
 }

@@ -169,3 +169,117 @@ javascript resources:
 30 days of javascript - miniprojects you can download takes half an hour each
 codewars - compete with a developer to see who can finish first - helps with dev interviews
 helps 
+
+-----
+
+ 
+//From Itunes example 
+// .done(function(data){
+//    console.log(data);
+//    $.each(data.results,function(key,value){
+//      $("album-list").append("<li><img 
+//     src='"+value.artworkUrl60+"'>"+value.collectionName+"<"/li>");
+//    });
+//  })
+
+//cleaner version: 
+// .done(function(data){ 
+//  albumData=data.results
+})//end of done function
+
+ });//end of ajax call
+
+
+//  $.each(data.results,function(key,value){
+//      $("articleswImages").append("+ enter values+");
+// $(".stories").append("<li><img src='"+value.artworkUrl60+"'>"+value.collectionName+"</li>");
+
+  //end of.each
+ 
+// $(".ajax-loader").show();   
+
+// $('.stories').empty(); //or .remove
+
+// $(".ajax-loader").hide();
+
+//Fail function
+// .fail(function() {
+//   console.log (fail);
+//   $('stories').append('Sorry! There was a problem, please try again.');
+// };  //end of fail
+
+
+
+
+
+
+//FROM SLIDES
+// $('button').on('click', function() {
+//    $.ajax({
+//       method: 'GET',
+//       url: 'https://api.github.com/users/octocat'
+//    })
+//    .done(function(data) {
+//       $('.user-name').append(data.login);
+//    })
+
+/*ITUNES EXAMPLE
+$("#album-search").on("submit", function(event){
+
+ $.ajax({
+   method:"GET", 
+   dataType:"jsonp",
+   url:"https://itunes.apple.com/search?entity=album&limit=6&term="
+   $("artist-name").val().replace("","+")
+   })
+   
+  .done(function(data){
+   console.log(data);
+   $.each(data.results,function(key,value){
+     $("album-list").append("<li><img 
+    src='"+value.artworkUrl60+"'>"+value.collectionName+"<"/li>");
+   });
+ }) //end of done
+
+   .fail(function(){
+     console.log("anything");
+     ("album-list").append("<li>no results</li>");
+   });  //end of fail
+}); //end of on function
+
+$('.album-list').empty(); 
+*/
+
+//initial variables itunes example
+//eg. albumData, albumItems, artistName, itunesUrl
+//    $albumList=(."album-list");
+
+
+
+-------------
+
+// //connect to DOM
+// $(document).ready(function() {
+
+// //on to make button functional, then prevent page from refreshing
+//    $(".sections").on('change', function() {
+//      event.preventDefault();
+
+// //NYT API//
+// var select = $('.sections') .val();
+//    var url = 'https://api.nytimes.com/svc/topstories/v2/' + select + '.json';
+//       url += '?' + $.param({'api-key': '53dfced34ab7497ca7331f1f197cb367'
+//     })
+    
+// $.ajax({
+//  method: 'GET',
+//  url: url
+ 
+// })
+
+//  //.done method to tell browser what to do with the request
+//  .done(function(data) {
+//    console.log (data);
+//  }
+//    }) //end of on function
+// }); //end of doc.ready

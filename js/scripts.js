@@ -1,115 +1,56 @@
-//connect to DOM ~
-// on click, select topic ~ 
-// prevent default ~
-// header collapse
-// empty - or .remove? ~
-// loader pops up - $(".ajax-loader").show();
-// json fetch - probs the longest block of code?
-// append data
-//make sure only 12 and with images. use filter and splice.
-// remove loader - $('.name').remove();
-// fail ~
-
-//connect to DOM
 $(document).ready(function() {
+  $('.sections').on('change', function() {
+      event.preventDefault();
 
-//on to make button functional, then prevent page from refreshing
-   $("#sections").on('change', function() {
-     event.preventDefault();
+    var select = $('.sections').val();
+    var url = 'https://api.nytimes.com/svc/topstories/v2/' + select + '.json';
+       url += '?' + $.param({'api-key': '53dfced34ab7497ca7331f1f197cb367'
+     })
+    $.ajax({
+      method: 'GET',
+      url: url
+    })
+    .done(function(data) {
+      console.log (data);
 
-//initial variables itunes example
-//eg. albumData, albumItems, artistName, itunesUrl
-//    $albumList=(."album-list");
+      var articles = "";
+      var articleWithImage = data.results.filter(function(value){ //data.results.filter?
+                    return value.multimedia.length
+      }).slice(0, 12);
+     
+      // var articleImage = value.multimedia[4].url, 
+      //     abstract = value.abstract,
+      //     articleUrl = value.url; 
 
-//NYT API//
-var url = 'https://api.nytimes.com/svc/topstories/v2/home.json';
-    url += '?' + $.param({'api-key': "53dfced34ab7497ca7331f1f197cb367"
+    // var results = data.results;
+    // var articleImage, abstract, articleUrl,
+    // articleImage = results.filter(function(value){ //data.results.filter?
+    //                 return value.multimedia.length > 0;
+    // });//end of .filter
 
-$.ajax({
- url: url,
- method: 'GET', 
- dataType: 'json';
- 
-//From Itunes example 
-// .done(function(data){
-//    console.log(data);
-//    $.each(data.results,function(key,value){
-//      $("album-list").append("<li><img 
-//     src='"+value.artworkUrl60+"'>"+value.collectionName+"<"/li>");
-//    });
-//  })
+     $.each(articleWithImage, function(key,value){
 
-//cleaner version: 
-// .done(function(data){ 
-//  albumData=data.results
-
-//.done method to tell browser what to do with the request
- .done(function(data) {
-   console.log ('data');
-
- $.each(data.results,function(key,value){
-     $("articleswImages").append("+ enter values+");
-// $(".stories").append("<li><img src='"+value.artworkUrl60+"'>"+value.collectionName+"</li>");
-
-    });//end of.each
- })//end of done function
-
- });//end of ajax call
-
-//loader
-$(".ajax-loader").show();   
-
-//clear results before next selection  
-$('.stories').empty(); //or .remove
-
-//hide loader
-$(".ajax-loader").hide();
-
-//Fail function
-.fail(function() {
-  console.log ('fail');
-  $('stories').append('Sorry! There was a problem, please try again.');
-};  //end of fail
-
-}); //end of on function
-}); //end of doc.ready
-
-
-
-
-//FROM SLIDES
-// $('button').on('click', function() {
-//    $.ajax({
-//       method: 'GET',
-//       url: 'https://api.github.com/users/octocat'
-//    })
-//    .done(function(data) {
-//       $('.user-name').append(data.login);
-//    })
-
-/*ITUNES EXAMPLE
-$("#album-search").on("submit", function(event){
-
- $.ajax({
-   method:"GET", 
-   dataType:"jsonp",
-   url:"https://itunes.apple.com/search?entity=album&limit=6&term="
-   $("artist-name").val().replace("","+")
-   })
+      //  if (value.multimedia.length > 0 ) {
+    
+    
+          articles += '<ul>';
+          articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' + '<img src="' + value.multimedia[4].url + '" id="news-img"/>' + '</a>';
+          articles += '<p class="abstract">' + value.abstract + '</p>'
+          articles += '</ul>';
+          
+          //results.slice(0,12)
    
-  .done(function(data){
-   console.log(data);
-   $.each(data.results,function(key,value){
-     $("album-list").append("<li><img 
-    src='"+value.artworkUrl60+"'>"+value.collectionName+"<"/li>");
-   });
- }) //end of done
+     });//end of .each
 
-   .fail(function(){
-     console.log("anything");
-     ("album-list").append("<li>no results</li>");
-   });  //end of fail
-}); //end of on function
+// $('.stories ul').append('<li><a href="(' + articleUrl +')"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay">' + '<p>' + abstract + '</p>' + '</div>' + '</article></a></li>');
 
-$('.album-list').empty(); 
-*/
+$('.stories').append(articles);
+//$('.stories ul').append('<li>hi</li>');
+
+});// end of done
+  
+  //   //  $(".stories ul").append("<li><img 
+  //   // src='"+value.artworkUrl60+"'>"+value.collectionName+"<"/li>");
+  //  });
+  }); //end of on function
+}); //end of doc.ready
