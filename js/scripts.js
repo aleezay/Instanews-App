@@ -43,6 +43,7 @@ $.ajax({
 // .done(function(data){ 
 //  albumData=data.results
 
+//.done method to tell browser what to do with the request
  .done(function(data) {
    console.log ('data');
 
