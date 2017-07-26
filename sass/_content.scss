@@ -1,13 +1,81 @@
-// The base font size is 16px and it HEX code is #ffffff
-// The body font family is Open Sans Light
-// The medium grey colour of the text in the footer is #c2c2c2
-
 *{
   box-sizing: border-box;
-  background-color: $background-color-black;
 }
 
-.logo {
+.search-form{
+  display: block;
+}
+.drop-down {
+// position: relative;
+width: 100%;
+// text-align: center;
+// display: flex;
+// // align-content: center;
+// flex-direction: column;
+// // align-items:center;
+// justify-content: flex-end;
+// position:center;
+background-color: white;
+color: black;
+.sections {
+background-color: white;
+color: black;
+}
+}
+
+ .p{
+  background-color: black;
+  font: white;
+}
+
+
+ .logo {
   margin:10rem;
   background-color: black;
+  display:flex;
+  align-content: center;
+  // position: absolute;
+ }
+
+ .image { 
+   position: relative; 
+   width: 100%;
+   z-index: -100px;
+ }
+
+ li{
+    list-style-type: none;
+    a{
+      text-decoration: none;
+    }
+  }
+
+.stories { 
+  //  position: absolute; 
+  //  color: $font-white;
+   background: rgba(0, 0, 0, 0.7);
+   top: 200px; 
+   bottom: 0;
+   left: 0; 
+   width: 100%;
+   height: 50px;
+   z-index: 50px; 
+   flex-direction: column;
+}
+
+.ajax-loader{
+
+}
+
+.footer{
+    background-color: $bg-black;
+}
+
+.copyright {
+  color: $footer-grey;
+  font:$font;
+  text-align: center;
+  span{
+    text-transform: uppercase;
+  }
 }
