@@ -1,33 +1,28 @@
-*{
-  box-sizing: border-box;
-}
-
-.search-form{
+.form{
   display: block;
 }
+ .p {
+  background-color: black;
+  font: white;
+ }
+
 .drop-down {
 // position: relative;
 width: 100%;
-// text-align: center;
-// display: flex;
-// // align-content: center;
-// flex-direction: column;
-// // align-items:center;
-// justify-content: flex-end;
+text-align: center;
+display: flex;
+align-content: center;
+flex-direction: column;
+// align-items:center;
+justify-content: flex-end;
 // position:center;
 background-color: white;
 color: black;
 .sections {
 background-color: white;
 color: black;
+ }
 }
-}
-
- .p{
-  background-color: black;
-  font: white;
-}
-
 
  .logo {
   margin:10rem;

@@ -8,10 +8,8 @@ then shrinks to only be header size. So need to set height
   font: $font;
   color: $font-white;
   height: 90vh;
-  width: 100%vw;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
-
