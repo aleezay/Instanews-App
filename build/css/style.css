@@ -74,12 +74,9 @@ table {
   font-weight: bold;
   font-style: italic; }
 
-/*The header takes up most of the page in the mobile version 
-then shrinks to only be header size. So need to set height 
-% rem or px? 90%? 90 vh? */
 header {
   background-color: #000;
-  font: 16px "Open Sans", sans-serif;
+  font: "Open Sans", sans-serif;
   color: #FFF;
   height: 90vh;
   width: 100vw;
@@ -99,11 +96,8 @@ header {
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
-  right: 50%;
+  right: 60%;
   top: 40%; }
-
-.p {
-  font: white; }
 
 .drop-down {
   width: 100%;
@@ -182,19 +176,24 @@ li {
   left: 50%; }
 
 .footer {
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: 0 2rem;
   background-color: #000; }
-
-.copyright {
-  color: #c2c2c2;
-  font: 16px "Open Sans", sans-serif;
-  text-align: center; }
-  .copyright span {
-    text-transform: uppercase; }
+  .footer p {
+    background-color: #000;
+    color: #c2c2c2;
+    font-size: .9rem;
+    font-family: "Open Sans", sans-serif;
+    text-align: center; }
+    .footer p span {
+      text-transform: uppercase; }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font: 16px "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.5; }
 
 .body {
@@ -208,4 +207,4 @@ li {
           flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: black; }
+  background-color: #000; }

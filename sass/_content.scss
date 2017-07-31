@@ -4,13 +4,9 @@
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
-    right: 50%;
+    right: 60%;
     top: 40%;
 }
- .p {
-  // background-color: black;
-  font: white;
- }
 
 .drop-down {
 // position: relative;
@@ -32,10 +28,8 @@ color: black;
 
  .logo {
   margin:10rem;
-  // background-color: black;
   display:flex;
   align-content: center;
-  // position: absolute;
   text-align: center;
  }
 
@@ -89,15 +83,6 @@ color: black;
     left: 50%;
 }
 
-.footer{
-    background-color: $bg-black;
-}
-
-.copyright {
-  color: $footer-grey;
-  font:$font;
-  text-align: center;
-  span{
-    text-transform: uppercase;
-  }
+.html {
+  background-color: $bg-color;
 }

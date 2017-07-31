@@ -54,11 +54,3 @@ Be optimized for 3 screen sizes: mobile, min-width: 600px, and min-width: 1000px
 Additional requirements:
 
 Be sure to test your project completely in all major browsers (Chrome, Firefox, Safari, Opera, IE11/Edge) when you think you’re finished
-
- <p class="intro">Welcome to my page!</p>
-To target this in jquery: $('.intro')
-to change the color using css: $('.intro').css('color', 'red');
-
-to store in a variable: var $intro = $('.intro');
-$intro.css('color', 'red');
-$intro.addClass('greeting');
