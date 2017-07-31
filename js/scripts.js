@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $(".ajax-loader").hide();
   $('.sections').on('change', function() {
       event.preventDefault();
 
@@ -9,7 +10,7 @@ $(document).ready(function() {
     
     $('.stories').empty(); //or .remove
 
-    // $(".ajax-loader").show();   
+    $(".ajax-loader").show();   
 
     $.ajax({
       method: 'GET',
@@ -25,10 +26,10 @@ $(document).ready(function() {
 
      $.each(articleWithImage, function(key,value){
 
-        articles += '<ul class="articles">';
+        articles += '<li class="articles">';
         articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' + '<img class="image" src="' + value.multimedia[4].url + '" id="news-img"/>' + '</a>';
         articles += '<p class="abstract">' + value.abstract + '</p>'
-        articles += '</ul>';
+        articles += '</li>';
 
       //  articles += '<ul class="news">';
       //  articles += '<a href=' + value.url + '>';

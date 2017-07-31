@@ -1,8 +1,14 @@
-.form{
-  display: block;
+.form-container{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    right: 50%;
+    top: 40%;
 }
  .p {
-  background-color: black;
+  // background-color: black;
   font: white;
  }
 
@@ -26,29 +32,34 @@ color: black;
 
  .logo {
   margin:10rem;
-  background-color: black;
+  // background-color: black;
   display:flex;
   align-content: center;
   // position: absolute;
+  text-align: center;
  }
 
  .image { 
    position: relative; 
    width: 100%;
    z-index: -100px;
+   display: block;
+   height: 420px;
+   background-position: 50%;
+   background-size: cover;
  }
+
 
  li{
     list-style-type: none;
+    flex: 0 1 100%;
     a{
       text-decoration: none;
     }
   }
 
 .stories { 
-  //  position: absolute; 
-  //  color: $font-white;
-   background: rgba(0, 0, 0, 0.7);
+   background-color: $bg-black;
    top: 200px; 
    bottom: 0;
    left: 0; 
@@ -56,10 +67,26 @@ color: black;
    height: 50px;
    z-index: 50px; 
    flex-direction: column;
+
 }
 
-.ajax-loader{
+.abstract{
+   background: rgba(0, 0, 0, 0.7);
+   color: white;
+   font-size: 1rem;
+   padding:0.5rem;
+   line-height: 1.5rem;
+   bottom: 0;
 
+}
+
+.ajax-loader img {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
 }
 
 .footer{
