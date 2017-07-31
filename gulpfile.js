@@ -10,7 +10,7 @@ const gulp = require('gulp'),
       cssnano = require('gulp-cssnano'),
       prettyError = require('gulp-prettyerror'),
       babel = require ('gulp-babel'),
-       browserSync = require('browser-sync').create();
+      browserSync = require('browser-sync').create();
    
 //Gulp Tasks below
 //Gulp Babel
