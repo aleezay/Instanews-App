@@ -1,0 +1,89 @@
+body{
+
+color: #09206d;
+	background-color: #f6f8fa;
+
+max-width: 80%
+max-height: 80%
+}
+*{font-family: 'Alegreya Sans SC:100', sans-serif;
+  margin: 20px;
+  text-align: center;
+
+
+}
+h1 {
+  
+  font-size:3.5em;
+  font-weight: 100;
+  margin: 15;
+  text-align: center;
+}
+p {
+   font-size: 2.5em;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+}
+h3 {
+  
+  font-size:3em;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+
+}
+
+p {
+  
+  font-size: 2.5em;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+}
+h4 {
+  
+  font-size:3em;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+}
+p {
+  
+  font-size: 25px;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+}
+h5 {
+  
+  font-size:30px;
+  font-weight: 200;
+  margin: 10px;
+  text-align: center;
+}
+p {
+  
+  font-size: 25px;
+  font-weight: 200;
+  margin: 15;
+  text-align: center;
+}
+h6 {
+  
+  font-size:30px;
+  font-weight: 400;
+  margin: 10px;
+  text-align: center;
+}
+
+body {
+ background-size: cover 
+  
+  margin: 0px;
+  padding: 50px 60px;
+}
+  .actions {
+  text-align: center;
+  margin-top: 30px;
+}

@@ -7,4 +7,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+        //      @include desktop {
+        //         flex-direction: row;
+        //     }
+        // }
+
+        // @include tablet {
+        //     align-items: center;
+        //     width: 100%;
+        //     height: 300px;
+        // }
+
+        // @include desktop {
+        //     justify-content: flex-start;
+        //     height: 600px;
+        //     align-items: center;
+        //     }
 }
+

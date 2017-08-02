@@ -8,7 +8,7 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       autoprefixer = require('gulp-autoprefixer'),
       cssnano = require('gulp-cssnano'),
-      prettyError = require('gulp-prettyerror'),
+      prettyError = require('gulp-prettyError'),
       babel = require ('gulp-babel'),
       browserSync = require('browser-sync').create();
    
@@ -70,4 +70,4 @@ gulp.task('watch', function(){
 });
 
 //Gulp default task (always at the bottom)
-gulp.task('default', ['watch', 'browser-sync']); 
+gulp.task('default', ['watch', 'scripts','browser-sync', 'sass']); 
