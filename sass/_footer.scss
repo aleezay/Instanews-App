@@ -1,18 +1,16 @@
-.footer {
-    margin-bottom: 3rem;
+.footer p {
+    color: $footer;
     text-align: center;
-    padding: 0 2rem;
-        background-color: $bg-black;
-        position: absolute;
-        bottom: 0;
-    p{
-        background-color: $bg-black;
-        color: $footer;
-        font-size: .9rem;
-        font-family: $font;
-        text-align: center;
+    font-family: $font;
+    font-weight: 300;
+    font-style: normal;
     span {
-          text-transform: uppercase;
+        text-transform: uppercase;
     }
+    include tablet {
+        max-width: 1000px;
+        @include desktop {
+            max-width: 4000px;
+        }
     }
 }

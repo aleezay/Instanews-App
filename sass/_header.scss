@@ -1,10 +1,24 @@
   header {
-  background-color: $bg-black;
-  font: $font;
-  color: $font-white;
-  height: 90vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      background-color: $bg-black;
+      font: $font;
+      font-weight: 300;
+      font-style: normal;
+      color: $font-white;
+      height: 90vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; 
+        @include desktop {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        @include tablet {
+            align-items: center;
+            width: 100%;
+            height: 300px;
+        }
+  }
+
+  ;
