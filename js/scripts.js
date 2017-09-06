@@ -37,11 +37,14 @@ $(document).ready(function () {
         $('.stories').append(articles);
 
         $(".ajax-loader").hide();
+                
+        $('.stories').fail(function() {
+          $('stories').append('Sorry! There was a problem, please try again.');
+            $(".ajax-loader").always(function() {
+                loader();
+            });
 
-        // .fail(function() {
-        //   console.log (fail);
-        //   $('stories').append('Sorry! There was a problem, please try again.');
-        // };  //end of fail
+
 
       }); // end of done
   }); //end of on function

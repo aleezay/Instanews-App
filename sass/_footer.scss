@@ -7,10 +7,15 @@
     span {
         text-transform: uppercase;
     }
-    include tablet {
+
+    @include tablet {
         max-width: 1000px;
+        align-self: baseline;
+        margin-top: 10rem;
+    
         @include desktop {
             max-width: 4000px;
+            padding-right: 40rem;
         }
     }
 }

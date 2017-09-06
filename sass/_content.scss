@@ -25,28 +25,37 @@
 }
 
 .logo {
-    margin-bottom: 1rem; // transition: all .5s ease-out .5s;
+    margin-bottom: 1rem; 
+     @include tablet {
+        // margin: 0 1rem 0 0;
+        // max-width: 170px;
+    // transition: all .5s ease-out .5s;
 }
-
+}
 .image {
     z-index: -100px;
     display: block;
     height: 420px;
     background-position: 50%;
-    background-size: cover; // position: absolute;
+    background-size: cover;
+    z-index: -10;
+    position: relative;
 }
 
 .story-container {
-    position: relative; // display:flex;
-    & .abstract {
+    width: 100%;
+    .abstract {
         background: rgba(0, 0, 0, 0.7);
         color: white;
-        font-size: 1rem;
+        font-size: 16px;
         padding: 0.5rem;
         line-height: 1.5rem;
-        bottom: 0; // position: absolute;
-    }
-    width: 100%;
+        bottom: 0; 
+        position: absolute;
+        font-family: $font; 
+        font-weight: 300;
+	    font-style: normal;
+       } 
     @include tablet {
         max-width: 1000px;
         @include desktop {
@@ -77,16 +86,17 @@
     }
 }
 
-.abstract {
+.abstract p{
     background: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: pink;
     font-size: 1rem;
     padding: 0.5rem;
     line-height: 1.5rem;
     bottom: 0;
-    p {
-        position: absolute;
-    }
+    z-index:9999;
+}
+#news-img{
+  position: relative;
 }
 
 .ajax-loader img {
@@ -96,4 +106,7 @@
     position: fixed;
     top: 50%;
     left: 50%;
+}
+.articles a{
+    position: relative;
 }
