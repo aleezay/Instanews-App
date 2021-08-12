@@ -27,10 +27,19 @@ $(document).ready(function () {
 
         $.each(articleWithImage, function (key, value) {
 
+
+          /*
           articles += '<li class="articles">';
-          articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' + '<article style="background-image:url(' + value.multimedia[4].url + ')" img class="image">' + '</a>';
+          articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' 
+          + '<article style="background-image:url(' + value.multimedia[4].url + ')" img class="image">' + '</a>';
           articles += '<p class="abstract">' + value.abstract + '</p>'
           articles += '</li>';
+*/
+
+articles += '<li class="articles">';
+          articles += '<a href="' + value.url + '" class="news-anchor"  target="_blank">' + '<article style="background-image:url(' + value.multimedia[4].url + ')" img class="image">';
+          articles += '<p class="abstract">' + value.abstract + '</p>'
+          articles += '</article></a></li>';
 
         }); //end of .each
 
