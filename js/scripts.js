@@ -42,6 +42,7 @@ articles += '<li class="articles">';
           articles += '</article></a></li>';
 
         }); //end of .each
+        
 
         $('.stories').append(articles);
 
@@ -50,11 +51,11 @@ articles += '<li class="articles">';
         $('.stories').fail(function() {
           $('stories').append('Sorry! There was a problem, please try again.');
             $(".ajax-loader").always(function() {
-                loader();
+                loader.empty();
             });
 
 
 
       }); // end of done
   }); //end of on function
-}); //end of doc.ready
+}); //end of ready
